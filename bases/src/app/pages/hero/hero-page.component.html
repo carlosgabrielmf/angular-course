@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Page</title>
+</head>
+<body>
+
+  <h1>{{ name() }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ name() }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ age() }}</dd>
+
+  <td>Método:</td>
+  <dd>{{ heroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <!-- ! Intentar  -->
+  <!-- <dd> {{ nameCapitalize() }} </dd> -->
+   <!--* Aqui tenemos un pipe que no es mas que un objeto que modifica algo sin tocar la data-->
+  <dd> {{ name() | uppercase }} </dd>
+</dl>
+
+<button (click)="changeHero()" class="btn btn-primary mx-2">
+  Cambiar nombre
+</button>
+
+<button (click)="changeAge()" class="btn btn-primary">Cambiar edad</button>
+
+<button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
+</body>
+</html>

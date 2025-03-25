@@ -23,7 +23,7 @@ export class CounterComponent {
   //* Esta funcion incrementa en 1 el valor de mi contador
   increaseBy(value: number){
     this.counter += value;
-    //* Aqui podemos ver como actua un signal, recibe un callback y un valor.
+    //* Aqui podemos ver como actua un signal con el metodo update, recibe un callback y un valor.
     this.counterSignal.update((current) => current + value);
   }
 
@@ -36,6 +36,6 @@ export class CounterComponent {
   //* Esta funcion disminuye en 1 el valor de mi contador
   decreaseBy(value: number){
     this.counter -= value;
-    this.counterSignal.update((current) => current + value);
+    this.counterSignal.update((current) => current - value);
   }
 }
